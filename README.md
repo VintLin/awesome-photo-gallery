@@ -8,22 +8,22 @@
 </p>
 
 ## 📖 概述
-这是一个可自由配置的图库展示系统，专为需要快速搭建带有标签过滤功能的图片浏览平台而设计。用户只需填入自己的图片资源和配置信息，即可快速部署一个功能完整的图库系统。该系统支持按分类、朝代、标签等多维度筛选，提供优雅的瀑布流展示效果。
+这是一个可自由配置的图库展示系统，专为需要快速搭建带有标签过滤功能的图片浏览平台而设计。用户只需填入自己的图片资源和配置信息，即可快速部署一个功能完整的图库系统。该系统支持按分类、时间、标签等多维度筛选，提供优雅的瀑布流展示效果。
 
 网站展示效果：
 <p align="center">
   <img src='./images/web_page_example.jpg' width=800>
 </p>
 
-## ❓ 国学知识库能做什么？
+## ❓ Awesome Photo Gallery 能做什么？
 
 #### 1. 智能图片管理
-系统支持灵活的图片分类管理，包括自定义分类、朝代标记和多标签系统。通过 JSON 配置文件，用户可以轻松管理大量图片资源，每张图片都包含详细的元数据信息。
+系统支持灵活的图片分类管理，包括自定义分类、时间标记和多标签系统。通过 JSON 配置文件，用户可以轻松管理大量图片资源，每张图片都包含详细的元数据信息。
 
 #### 2. 多维度筛选功能
 提供强大的筛选功能，用户可以通过以下维度快速定位目标图片：
 - **分类筛选**：按图片类别筛选
-- **朝代筛选**：按时间筛选
+- **时间筛选**：按时间筛选
 - **标签筛选**：按自定义标签筛选
 - **组合筛选**：支持多条件组合筛选
 
@@ -91,8 +91,8 @@ pnpm build && pnpm start
 该目录包含所有的数据配置文件：
 
 - `images.json` (必需): 主数据文件，包含所有图片的详细信息
-- `metadata.json` (必需): 元数据配置，包含分类、朝代、标签等信息
-- `建筑.json`, `服饰.json` 等: 按分类拆分的数据文件（可选）
+- `metadata.json` (必需): 元数据配置，包含分类、时间、标签等信息
+- 按分类拆分的数据文件（可选）
 
 #### `images.json` 数据格式：
 
@@ -107,9 +107,9 @@ pnpm build && pnpm start
       "name": "图片名称",
       "url": "/images/category/filename.jpg",
       "height": 750,
-      "category": "建筑",
-      "dynasty": "唐朝",
-      "tags": ["宫殿", "屋顶"],
+      "category": "分类名称",
+      "dynasty": "时间标记",
+      "tags": ["标签1", "标签2"],
       "description": "详细描述",
       "source": "来源信息"
     }
@@ -121,17 +121,17 @@ pnpm build && pnpm start
 
 ```json
 {
-  "categories": ["建筑", "服饰", "您的分类"],
-  "dynasties": ["唐朝", "宋朝", "您的朝代"],
+  "categories": ["分类1", "分类2", "您的分类"],
+  "dynasties": ["时间1", "时间2", "您的时间"],
   "tags": {
-    "建筑": ["宫殿", "民居", "寺庙"],
-    "服饰": ["官服", "民服", "配饰"]
+    "分类1": ["标签1", "标签2", "标签3"],
+    "分类2": ["标签A", "标签B", "标签C"]
   },
   "statistics": {
     "totalImages": 100,
     "categoryCounts": {
-      "建筑": 50,
-      "服饰": 50
+      "分类1": 50,
+      "分类2": 50
     }
   }
 }
@@ -144,8 +144,6 @@ pnpm build && pnpm start
 ```bash
 public/
 ├── images/
-│   ├── architecture/     # 建筑类图片
-│   ├── clothing/         # 服饰类图片
 │   └── your-category/    # 您的自定义分类
 └── web_icon.png         # 网站图标
 ```
@@ -230,8 +228,8 @@ docker-compose up -d
 
 ## 👨‍💻‍ 贡献者
 
-<a href="https://github.com/your-repo/awesome-photo-gallery/contributors">
-  <img src="https://contrib.rocks/image?repo=your-repo/awesome-photo-gallery" />
+<a href="https://github.com/VintLin/awesome-photo-gallery/contributors">
+  <img src="https://contrib.rocks/image?repo=VintLin/awesome-photo-gallery" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
