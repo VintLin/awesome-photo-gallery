@@ -1,0 +1,81 @@
+name: ✨ 功能请求
+description: 建议一个新功能或改进
+title: "[Feature] "
+labels: ["enhancement", "needs-discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您提出功能建议！请提供详细信息以帮助我们理解您的需求。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🤔 问题描述
+      description: 请描述您遇到的问题或不便之处
+      placeholder: 现在的使用中遇到什么困难或不便？
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 建议的解决方案
+      description: 请描述您希望看到的功能
+      placeholder: 描述您希望实现的功能和预期效果...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 替代方案
+      description: 请描述您考虑过的任何替代解决方案或功能
+      placeholder: 是否有其他可行的解决方案？
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 📊 优先级
+      description: 这个功能对您来说有多重要？
+      options:
+        - 低 - 有就更好
+        - 中 - 会显著改善体验
+        - 高 - 对使用很重要
+        - 紧急 - 阻碍了正常使用
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 🏷️ 功能分类
+      description: 这个功能属于哪个类别？
+      options:
+        - UI/UX 改进
+        - 性能优化
+        - 新功能
+        - 数据处理
+        - 搜索功能
+        - 筛选功能
+        - 图片处理
+        - 移动端优化
+        - 无障碍功能
+        - 其他
+
+  - type: checkboxes
+    id: willingness
+    attributes:
+      label: 🙋 贡献意愿
+      description: 您是否愿意参与实现这个功能？
+      options:
+        - label: 我愿意提交 PR 来实现这个功能
+        - label: 我可以帮助测试这个功能
+        - label: 我可以提供设计建议或反馈
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📋 其他信息
+      description: 请提供任何其他相关信息、参考资料或示例
+      placeholder: 任何其他可能有用的信息、链接或参考...

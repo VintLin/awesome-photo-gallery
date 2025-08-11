@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 项目文档
+    url: https://github.com/[用户名]/guoxue-knowledge-base/blob/main/docs/README.md
+    about: 查看项目文档和常见问题解答
+  - name: 💬 讨论区
+    url: https://github.com/[用户名]/guoxue-knowledge-base/discussions
+    about: 参与社区讨论，分享想法和经验
+  - name: 🔍 搜索现有 Issues
+    url: https://github.com/[用户名]/guoxue-knowledge-base/issues
+    about: 在提交新问题前，请先搜索是否已有类似问题

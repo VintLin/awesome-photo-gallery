@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  guoxue-app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      # 挂载图片数据目录（可选，用于动态更新图片）
+      - ./public/images:/app/public/images:ro
+      # 挂载 JSON 数据目录（可选，用于动态更新数据）
+      - ./data:/app/data:ro
+    environment:
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0
+      - PORT=3000
+    restart: unless-stopped
+    container_name: guoxue-knowledge-base
+    networks:
+      - guoxue-network
+
+networks:
+  guoxue-network:
+    driver: bridge

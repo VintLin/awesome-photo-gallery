@@ -1,0 +1,95 @@
+name: 🐛 Bug 报告
+description: 报告一个项目中的 bug 或问题
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您花时间填写这个 bug 报告！请提供尽可能详细的信息以帮助我们快速定位和修复问题。
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 🐛 问题描述
+      description: 请清晰简洁地描述这个 bug
+      placeholder: 描述您遇到的问题...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 🔄 复现步骤
+      description: 请提供详细的步骤来复现这个问题
+      placeholder: |
+        1. 进入 '...'
+        2. 点击 '...'
+        3. 滚动到 '...'
+        4. 看到错误
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ 期望行为
+      description: 请描述您期望发生的情况
+      placeholder: 描述预期的正确行为...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ 实际行为
+      description: 请描述实际发生的情况
+      placeholder: 描述实际发生的错误行为...
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 截图
+      description: 如果适用，请添加截图来帮助解释您的问题
+      placeholder: 请粘贴或拖拽截图到这里
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 🌐 浏览器
+      description: 问题出现在哪个浏览器？
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: 📱 设备类型
+      description: 问题出现在哪种设备上？
+      options:
+        - 桌面端
+        - 平板电脑
+        - 手机
+        - 其他
+
+  - type: input
+    id: os
+    attributes:
+      label: 💻 操作系统
+      description: 您使用的操作系统和版本
+      placeholder: "例如: macOS 13, Windows 11, iOS 16"
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📋 其他信息
+      description: 请提供任何其他相关的上下文信息
+      placeholder: 任何其他可能有用的信息...
